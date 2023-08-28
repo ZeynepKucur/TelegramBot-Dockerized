@@ -32,7 +32,7 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         '/recommendSong - Get a recommended song'
     ]
     commands_text = '\n'.join(commands)
-    await update.message.reply_text(f"Hey, this is my first version as she is new to this. Thanks for chatting with me.\n\nAvailable commands:\n{commands_text}")
+    await update.message.reply_text(f"Hi I'm here to provide random songs to you upon your request. You just have to text 'song' to me.\n\nAvailable commands:\n{commands_text}")
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Help is on the way.");
