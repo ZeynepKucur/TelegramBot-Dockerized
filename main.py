@@ -24,10 +24,6 @@ song_list = [track['track']['external_urls']['spotify'] for track in playlist['i
 
 
 #COMMANDS
-#why async?
-# async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     await update.message.reply_text("Hey, this is my first version as she is new to this. Thanks for chatting with me.");
-
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     commands = [
         '/start - Start the bot',
@@ -53,7 +49,7 @@ def handle_response(text: str) -> str:
     processed: str = text.lower()
 
     if 'hello' in processed:
-        return 'Oui'
+        return 'Hello there!'
 
     if 'how are you' in processed:
         return 'All good. How are you?'
@@ -61,7 +57,7 @@ def handle_response(text: str) -> str:
     if 'song' in processed:
         return f"There you go: {random.choice(song_list)}"
 
-    return 'Ok, I\'m done'
+    return 'If you want a song recommendation, type "song"'
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # Get basic info of the incoming message. Group chat or private chat?
@@ -84,8 +80,6 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     print('Bot:', response)
     await update.message.reply_text(response)
-
-
 
 
 # Log errors
