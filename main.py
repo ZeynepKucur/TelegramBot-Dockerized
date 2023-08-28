@@ -13,7 +13,7 @@ from config import SPOTIPY_CLIENT_ID, SPOTIPY_CLIENT_SECRET
 
 
 # Spotify playlist URI
-PLAYLIST_URI = 'https://open.spotify.com/playlist/0XFYD5hqgsSsXboCpqeTZa?si=c27b213f87304651'
+from config import PLAYLIST_URI
 
 # Initialize the Spotify API
 sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=SPOTIPY_CLIENT_ID, client_secret=SPOTIPY_CLIENT_SECRET))
