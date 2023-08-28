@@ -6,7 +6,7 @@ import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
 from config import TOKEN
-BOT_USERNAME: Final = '@ZKContainerized_bot'
+BOT_USERNAME: Final = '@spotifyrandomsongbot_bot'
 
 # Spotify credentials
 from config import SPOTIPY_CLIENT_ID, SPOTIPY_CLIENT_SECRET
